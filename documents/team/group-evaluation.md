@@ -159,5 +159,13 @@
  1.
  2.
 #### Comments:
- 1. Visuals were great and the presentation was easy to read.
- 2. 
+ 1. Visuals were great and the presentation was easy to read
+ 2.
+
+## Rosen
+### Questions:
+ 1. For the non function requirements, what do you mean by "quick"? Could you define how "quick" should be?
+### Comments:
+ 1. Reduce the introduction paragraph to multiple bullet points so that it is easier to follow
+ 2. Can increase the image size of the DFD level 1
+ 

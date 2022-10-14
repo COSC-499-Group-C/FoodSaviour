@@ -146,7 +146,7 @@
  2.
 #### Comments:
  1. Can increase the size of the DFD level 0 since the words on it are too small to read despte sitting near the screen.
- 2.
+ 2. Can add some visuals since it was hard to keep up with the presentation with all the words and same theme throughout.
 ### Team B
 #### Questions:
  1. What is the definition of "3D asssets"? What are some examples of 3D assets?

@@ -14,7 +14,7 @@
  1. Q1
  2. Q2
 #### Comments:
- 1. A
+ 1. Simplify both level 0 and level 1 DFDs
  2. B
 ### Team C
 #### Questions:
@@ -35,14 +35,14 @@
  2. Could cut down on the praragraphs and turn them into shorter bullet points.
 ### Team B
 #### Questions:
- 1. Q1
+ 1. Will wood come pre-cut or not? Will there be an option to choose?
  2. Q2
 #### Comments:
  1. A
  2. B
 ### Team C
 #### Questions:
- 1. Q1
+ 1. Will wood come pre-cut or not? Will there be an option to choose?
  2. Q2
 #### Comments:
  1. A
@@ -53,7 +53,7 @@
 ### Team A
 #### Questions:
  1. Will only the mouth of the images be animated?
- 2. Q2
+ 2. Do you have plans to do unit testing?
 #### Comments:
  1. A
  2. B
@@ -66,13 +66,13 @@
  2. B
 ### Team C
 #### Questions:
- 1. Q1
+ 1. Can you lip sync other languages?
  2. Q2
 #### Comments:
  1. A
  2. B
 
-## MNP Health and wellness
+## MNP Health and Wellness
 
 ### Team A
 #### Questions:
@@ -97,14 +97,14 @@
 
 ### Team A
 #### Questions:
- 1. Q1
+ 1. How will regions be organized/designated? What constitutes a region?
  2. Q2
 #### Comments:
  1. A
  2. B
 ### Team B
 #### Questions:
- 1. Q1
+ 1. How will regions be organized/designated? What constitutes a region?
  2. Q2
 #### Comments:
  1. Can reduce the paragraphs and make them into shorter, easier to read bullet points
@@ -112,29 +112,29 @@
 ### Team C
 #### Questions:
  1. How do the tags work and how does it help users find accomodations?
- 2. B
+ 2. How will regions be organized/designated? What constitutes a region?
 #### Comments:
  1. Could include some visuals so users can stay more focused easily.
 
 ## Medical App
 ### Team A
 #### Questions:
- 1.
+ 1. Is there a pharmacist who will manually make sure the final mediciation recommendation is okay? Or will the algorithm be accurate and trust-worthy enough to avoid that?
  2.
 #### Comments:
  1.
  2.
 ### Team B
 #### Questions:
- 1. 
- 2.
+ 1. Is there a pharmacist who will manually make sure the final mediciation recommendation is okay? Or will the algorithm be accurate and trust-worthy enough to avoid that?
+ 2. What about elderly as a user group?
 #### Comments: 
  1. Could increase the size of the data flow chart so that it is easier to see as the words on the diagram could not be read since it is so small. Perhaps put the individual DFDs on separate slides.
  2. Could add some visuals on slides where there are space to keep the audience attentative.
 ### Team C
 #### Questions:
  1. What do you mean by the form can tolerate inavlid inputs? Would that not create issues wwhere errors in the form will cause misunderstanding or wrong prepscriptions etc?
- 2. 
+ 2. If accuracy non-functional requirement fails, will their be a pharmacist to manually approve the recommended drug?
 #### Comments:
  1. The presentation was compact and easy to understand, without having too many words which makes it easy to follow.
  2. B
@@ -142,7 +142,7 @@
 ## Motive Platform
 ### Team A
 #### Questions:
- 1. 
+ 1. What will the marketplace showcase if organization assets are not planned to be public initially?
  2.
 #### Comments:
  1. Can increase the size of the DFD level 0 since the words on it are too small to read despte sitting near the screen.
@@ -156,15 +156,31 @@
  2. Could reduce the paragraphs to shorter bullet points so it will be easier to follow.
 ### Team C
 #### Questions:
- 1.
+ 1. Which user group uploads assets to marketplace? Can any user with an account sell their own assets publicly?
  2.
 #### Comments:
  1. Visuals were great and the presentation was easy to read
  2.
 
 ## Rosen
+### Team A
+### Questions:
+1. Will just the individual client be the user group or will all ROSEN data scientists be potential users?
+2. Can the user identify any object or class they choose? Or is only a set number of objects/classes provided by the client able to be identified?
+### Comments:
+1. Image database seems to be visually missing from DFDs
+2.
+### Team B
+### Questions:
+1. Will refining your machine learning algorithm be a bonus requirement/objective if time permits?
+2.
+### Comments:
+1.
+2.
+### Team C
 ### Questions:
  1. For the non function requirements, what do you mean by "quick"? Could you define how "quick" should be?
+ 2. Will just the individual client be the user group or will all ROSEN data scientists be potential users?
 ### Comments:
  1. Reduce the introduction paragraph to multiple bullet points so that it is easier to follow
  2. Can increase the image size of the DFD level 1

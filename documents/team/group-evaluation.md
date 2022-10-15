@@ -4,18 +4,18 @@
 
 ### Team A
 #### Questions:
- 1. Q1
- 2. Q2
+ 1. If the platform itself does not deliver, then does that mean the restaurants are responsible for delivering the food? Or the customers are responsible for picking up the food?
+ 2. How will the platform profit if no payments or transactions are made on the platform?
 #### Comments:
- 1. A
- 2. B
+ 1. Presentation went over time a lot, it seems like it was just reading the presentation slides directly and there were no paraphrasing at all.
+ 2. Could practice more on talking louder as it was hard to hear despite being on the front rows.
 ### Team B
 #### Questions:
- 1. Q1
- 2. Q2
+ 1. Is this platform like an "ordering" service platform then? Users "buy" online then pay in person and collect the food in person?
+ 2. How can you prevent people from "pranking" and ordering food and not showing up?
 #### Comments:
  1. Simplify both level 0 and level 1 DFDs
- 2. B
+ 2. A bit overtime on the presentation, could watch the time.
 ### Team C
 #### Questions:
  1. Can users make payments directly online? Since there were mentions about the donations, it is quite unclear what 'donations' mean in this case.

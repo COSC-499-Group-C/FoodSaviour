@@ -36,14 +36,14 @@
 ### Team B
 #### Questions:
  1. Will wood come pre-cut or not? Will there be an option to choose?
- 2. Q2
+ 2. They only mention credit payment. Will debit payment be available as well?
 #### Comments:
  1. A
  2. B
 ### Team C
 #### Questions:
  1. Will wood come pre-cut or not? Will there be an option to choose?
- 2. Q2
+ 2. How will they deal with payment errors if there is more website traffic than expected since they don’t expect much traffic?
 #### Comments:
  1. A
  2. B
@@ -84,10 +84,10 @@
 ### Team B
 #### Questions:
  1. What are the specific dashboards that you will be creating?
- 2. Q2
+ 2. Can a user also upload their own audio which can be converted to text?
 #### Comments:
  1. Nice presentation in terms of the milestone bar at the bottom of the slide.
- 2. B
+ 2. Slides are well organized with good graphics
 ### Team C
 - No evaluation needed as this is our team.
 
@@ -120,9 +120,9 @@
 ### Team A
 #### Questions:
  1. Is there a pharmacist who will manually make sure the final mediciation recommendation is okay? Or will the algorithm be accurate and trust-worthy enough to avoid that?
- 2.
+ 2. Working with so much personal medical information, how will they keep this safe and private?
 #### Comments:
- 1.
+ 1. Very clear presentation with loud speakers that were easy to understand
  2.
 ### Team B
 #### Questions:
@@ -143,21 +143,21 @@
 ### Team A
 #### Questions:
  1. What will the marketplace showcase if organization assets are not planned to be public initially?
- 2.
+ 2. What is their ideal maximum response time of the website?
 #### Comments:
  1. Can increase the size of the DFD level 0 since the words on it are too small to read despte sitting near the screen.
  2. Can add some visuals since it was hard to keep up with the presentation with all the words and same theme throughout.
 ### Team B
 #### Questions:
  1. What is the definition of "3D asssets"? What are some examples of 3D assets?
- 2.
+ 2. User groups not completely touched on. What are they?
 #### Comments:
  1. Presentation slide's design was great and matched the website they are building which gives an idea of what the finished product could look like!
  2. Could reduce the paragraphs to shorter bullet points so it will be easier to follow.
 ### Team C
 #### Questions:
  1. Which user group uploads assets to marketplace? Can any user with an account sell their own assets publicly?
- 2.
+ 2. Will you have to log in to browse the marketplace?
 #### Comments:
  1. Visuals were great and the presentation was easy to read
  2.
@@ -173,9 +173,9 @@
 ### Team B
 ### Questions:
 1. Will refining your machine learning algorithm be a bonus requirement/objective if time permits?
-2.
+2. How will the data scientists interact with their program?
 ### Comments:
-1.
+1. No baseline for website runtime
 2.
 ### Team C
 ### Questions:

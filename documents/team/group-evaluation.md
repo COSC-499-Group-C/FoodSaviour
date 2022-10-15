@@ -7,14 +7,14 @@
  1. If the platform itself does not deliver, then does that mean the restaurants are responsible for delivering the food? Or the customers are responsible for picking up the food?
  2. How will the platform profit if no payments or transactions are made on the platform?
 #### Comments:
- 1. Presentation went over time a lot, it seems like it was just reading the presentation slides directly and there were no paraphrasing at all.
- 2. Could practice more on talking louder as it was hard to hear despite being on the front rows.
+ 1. Presentation went over time a lot, it seems like it was just reading the presentation slides directly and there were no paraphrasing at all. It would be helpful if you could reduce the paragraphs to bullet points and paraphrase them so the audience can follow more easily along.
+ 2. Could practice more on talking louder and clearer during the presentation as it was hard to hear despite being on the front rows.
 ### Team B
 #### Questions:
- 1. Is this platform like an "ordering" service platform then? Users "buy" online then pay in person and collect the food in person?
- 2. How can you prevent people from "pranking" and ordering food and not showing up?
+ 1. Is this platform like an "ordering" service platform then? Users "buy" online then pay in person and collect the food in person? Since there will be no delivery or transactions made online.
+ 2. How can you prevent users from "pranking" and ordering food and not showing up? Are there penalties for if they don't show up to pick up the food?
 #### Comments:
- 1. Simplify both level 0 and level 1 DFDs
+ 1. Could improve by simplifying both level 0 and level 1 DFDs so it is clearer to see and follow.
  2. A bit overtime on the presentation, could watch the time.
 ### Team C
 #### Questions:

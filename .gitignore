@@ -1,2 +1,3 @@
-# Ignore .idea folder
+# Ignore .idea folders
+.idea/
 DjangoProject/.idea/

@@ -12,10 +12,17 @@ admin.autodiscover()
 
 urlpatterns = [
     path("sitemap.xml", sitemap, {"sitemaps": {"cmspages": CMSSitemap}}),
+    path("register/", views.register_request),
+    path("admin/", admin.site.urls),
+    path("", include("cms.urls")),
+]
+
+"""urlpatterns = [
+    path("sitemap.xml", sitemap, {"sitemaps": {"cmspages": CMSSitemap}}),
     path("en/register/", views.register_request, name="register")
 ]
 
-urlpatterns += i18n_patterns(path("admin/", admin.site.urls), path("", include("cms.urls")))
+urlpatterns += i18n_patterns(path("admin/", admin.site.urls), path("", include("cms.urls")))"""
 
 # This is only needed when using runserver.
 if settings.DEBUG:

@@ -1,3 +1,6 @@
 # Ignore .idea folders
 .idea/
 DjangoProject/.idea/
+# Ignore pycache folders
+DjangoProject/Project/__pycache__/
+DjangoProject/Project/Forms/__pycache__/

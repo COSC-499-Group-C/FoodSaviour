@@ -209,7 +209,8 @@ CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('home.html', 'Home Page')
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -220,7 +221,6 @@ CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
     'default': {
-        'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'localhost',
         'PORT': 3306,

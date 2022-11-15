@@ -13,6 +13,8 @@ admin.autodiscover()
 urlpatterns = [
     path("sitemap.xml", sitemap, {"sitemaps": {"cmspages": CMSSitemap}}),
     path("register/", views.register_request),
+    path("org_page/", views.org_page_request),
+    path("login/",views.login_request),
     path("admin/", admin.site.urls),
     path("", include("cms.urls")),
 ]

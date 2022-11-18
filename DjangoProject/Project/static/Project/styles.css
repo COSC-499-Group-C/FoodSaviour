@@ -19,10 +19,10 @@
     width: 20%;
 }
 body {
-    font-family: sans-serif;
     color: white;
     word-wrap: break-word;
     background: linear-gradient(180deg, #05668d 0%, #427aa1 50%);
+    font-family: "Verdana", sans-serif;
     background-attachment: fixed;
 }
 .center {

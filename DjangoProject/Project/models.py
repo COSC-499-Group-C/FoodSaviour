@@ -18,3 +18,12 @@ class OrgGroups(models.Model):
 
     class Meta:
         verbose_name_plural = "OrgGroups"
+
+
+# # This is just a snippet to remind myself to make text placeholders for the form
+# class UserLogin(models.Model):
+#     username = models.CharField(max_length=30)
+#     password = models.CharField(max_length=30)
+#
+#     class Meta:
+#         verbose_name_plural = "User"

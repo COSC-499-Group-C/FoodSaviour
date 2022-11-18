@@ -19,28 +19,51 @@
     width: 20%;
 }
 body {
+    color: white;
+    word-wrap: break-word;
+    background: linear-gradient(180deg, #05668d 0%, #427aa1 50%);
     font-family: "Verdana", sans-serif;
     background-attachment: fixed;
 }
-.container-fluid {
+.center {
     width: 100%;
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
 }
-.img-fluid {
+.center-text {
+    width: 100%;
+    text-align: center;
+}
+.img-lg {
     max-width: 70%;
     display: block;
     margin: auto;
 }
 .btn {
-    color: black;
-    background: #ebf2fa;
-    border-color: #ebf2fa;
-    font-weight: bold;
     width: 96px;
     border-radius: 9999px;
+}
+.btn-home {
+    color: black;
+    background: white;
+    border-color: white;
+    font-weight: bold;
     margin: 24px;
+}
+.navbar {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    width: 100%;
+}
+.btn-nav {
+    color: white;
+    background: black;
+    border-color: black;
+    font-weight: bold;
+    margin: 0;
+}
+.bold {
+    font-weight: bold;
 }

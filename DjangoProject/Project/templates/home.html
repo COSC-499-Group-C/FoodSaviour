@@ -5,18 +5,11 @@
 
 {% block content %}
     <div class="container">
-    {% if user.is_authenticated %}
-        <div class="container-fluid">
-            Hello, {{ username }}
-            <a href="/logout">Logout</a>
+        <div class="center center-text">
+            <h1 class="bold">Food Saviour</h1>
+            <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" class="img-lg">
+            <a href="/login" class="btn btn-home btn-primary">Login</a>
+            <a href="/register" class="btn btn-home btn-primary">Register</a>
         </div>
-    {% else %}
-        <div class="container-fluid">
-            <h1><strong>Food Saviour</strong></h1>
-            <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" class="img-fluid">
-            <a href="/login" class="btn btn-primary">Login</a>
-            <a href="/register" class="btn btn-primary">Register</a>
-        </div>
-    {% endif %}
     </div>
 {% endblock %}

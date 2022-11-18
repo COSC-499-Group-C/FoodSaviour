@@ -21,7 +21,7 @@ def register_request(request):
 
 def home_page_request(request):
     if request.user.is_authenticated:
-        return render(request=request, template_name="home.html", context={"username": request.user.username})
+        return render(request=request, template_name="home_loggedin.html", context={"username": request.user.username})
     else:
         return render(request=request, template_name="home.html")
 

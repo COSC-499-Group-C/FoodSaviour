@@ -8,7 +8,7 @@
 }
 .container {
     width: 100%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 .content {
     float: left;
@@ -19,9 +19,7 @@
     width: 20%;
 }
 body {
-    font-family: sans-serif;
-    color: #ebf2fa;
-    background: linear-gradient(180deg, #05668d 0%, #427aa1 50%);
+    font-family: "Verdana", sans-serif;
     background-attachment: fixed;
 }
 .container-fluid {

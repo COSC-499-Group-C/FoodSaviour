@@ -3,33 +3,93 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+    {#    <title>{% block title %}Login{% endblock title %}</title>#}
+    {#    <!--Login-->#}
+    {#    <div class="content py-5">#}
+    {#        <div>#}
+    {#            <!-- Logo in the top left corner -->#}
+    {#            <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left" width="100"#}
+    {#                 height="100">#}
+    {#            <h1 style="font-size: 40px; font-weight: lighter; color: #4d4d4d">Food Saviour</h1>#}
+    {#        </div>#}
+    {#        <div class = "container-fluid" style="left: 30%">#}
+    {#            <h1 style="font-size: 60px; font-weight: 600; color: black">Login to Your#}
+    {#                Account</h1>#}
+    {#            <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">#}
+    {#                Login using social networks</p>#}
+    {#            <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">#}
+    {#                –––––––––OR–––––––––</p>#}
+    {#            <form method="POST">#}
+    {#                {% csrf_token %}#}
+    {#                {{ login_form|crispy }}#}
+    {#                <button class="btn btn-primary"#}
+    {#                        type="submit" style="font-weight: lighter; font-size: 12px">#}
+    {#                    Sign in#}
+    {#                </button>#}
+    {#            </form>#}
+    {#            <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>#}
+    {#        </div>#}
+    {#    </div>#}
+
+<html style = "height: 100%" lang="en">
+<head>
     <title>{% block title %}Login{% endblock title %}</title>
-    <!--Login-->
-    <div class="content py-5">
-        <div>
-            <!-- Logo in the top left corner -->
-            <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left" width="100"
-                 height="100">
-            <h1 style="font-size: 40px; font-weight: lighter; color: #4d4d4d">Food Saviour</h1>
-        </div>
-        <div class = "container-fluid" style="left: 30%">
-            <h1 style="font-size: 60px; font-weight: 600; color: black">Login to Your
-                Account</h1>
-            <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
-                Login using social networks</p>
-            <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
-                –––––––––OR–––––––––</p>
-            <form method="POST">
-                {% csrf_token %}
-                {{ login_form|crispy }}
-                <button class="btn btn-primary"
-                        type="submit" style="font-weight: lighter; font-size: 12px">
-                    Sign in
-                </button>
-            </form>
-            <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+</head>
+<body style = "height: 100%">
+    {# Login #}
+    <div class="container">
+        <div class="row">
+            {# Create left side of page layout #}
+            <div class="col-12 col-md-8">
+                <div class="content py-5" style="width: 100%">
+                    <div class="container">
+                        {# Logo in the top left corner #}
+                        <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left"
+                             width="75"
+                             height="75">
+                        <h1 style="font-size: 35px; font-weight: lighter; color: #4d4d4d">Food Saviour</h1>
+                    </div>
+                    {# vertically center the form #}
+                    <div class="centered-element">
+                        <div class="form">
+                            {# create form with post method #}
+                            <form class="center" method="POST">
+                                {% csrf_token %}
+                                <h1 style="font-size: 60px; font-weight: 600; color: black">Login to Your Account</h1>
+                                <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                    Login using social networks</p>
+                                <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                    –––––––––OR–––––––––</p>
+                                {# Form styling #}
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Username">
+                                    <label for="floatingInput">Username</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                           placeholder="Password">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+                                {# Submit form #}
+                                <button class="w-50 btn btn-lg btn-primary" type="submit">Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Create right side of page layout #}
+            <div class="col-6 col-md-4" style="background: linear-gradient(#e66465, #9198e5);">
+                <div class = "form">
+                    <h1 style="font-size: 60px; font-weight: 600; color: white">New Here?</h1>
+                    <p style="font-size: 17px; font-weight: lighter; color: lightgray; letter-spacing: 2px">
+                        Create an account and start saving waste!</p>
+                    <button class="w-50 btn btn-lg btn-primary" type="button" onclick="window.location.href='/register'">Sign Up</button>
+                </div>
+            </div>
         </div>
     </div>
+</body>
+</html>
 
 
 

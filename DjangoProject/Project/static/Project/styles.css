@@ -9,6 +9,7 @@
 .container {
     width: 100%;
     margin: 0 auto;
+    max-width: 100%;
 }
 .content {
     float: left;
@@ -43,4 +44,39 @@ body {
     width: 96px;
     border-radius: 9999px;
     margin: 24px;
+}
+
+/* Format form on login page */
+
+.form-floating {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form.center {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Vertically center element*/
+
+.centered-element {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-20%);
+
+}
+
+.row {
+    display: flex;
+    height: 100%
 }

@@ -219,6 +219,7 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
+# Sydney's database path: /Users/sdny7293/Desktop/Sydney/Coding/Database/my.cnf
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

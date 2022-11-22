@@ -42,7 +42,7 @@
             {# Create left side of page layout #}
             <div class="col-md-8" style="position: relative">
                 <div class="container-fluid">
-                    <div class="col align-self-start py-5">
+                    <div class="align-self-start py-5">
                         <div class="container-fluid">
                             {# Logo in the top left corner #}
                             <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left"
@@ -53,35 +53,48 @@
                     </div>
 
                     {# vertically center the form #}
-                    <div class="container-fluid">
-                        <div class="form">
-                            {# create form with post method #}
-                            <form class="center" method="POST">
-                                {% csrf_token %}
-                                <h1 style="font-size: 60px; font-weight: 600; color: black">Login to Your Account</h1>
-                                <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
-                                    Login using social networks</p>
-                                <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
-                                    –––––––––OR–––––––––</p>
-                                {# Form styling #}
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="Username">
-                                    <label for="floatingInput">Username</label>
-                                </div>
-                                <div class="form-floating">
-                                    <input type="password" class="form-control" id="floatingPassword"
-                                           placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
-                                </div>
-                                {# Submit form #}
-                                <button class="w-50 btn btn-lg btn-primary" type="submit">Sign In</button>
-                            </form>
+                    <div class="col-md-8" style="width: 100%;">
+                        <div class="container-fluid"
+                             style="position: absolute; top: 50%; transform: translate(0%, -50%)">
+                            <div class="form">
+                                {# create form with post method #}
+                                <form class="center" method="POST">
+                                    {% csrf_token %}
+                                    <h1 style="font-size: 60px; font-weight: 600; color: black">Login to Your
+                                        Account</h1>
+                                    <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                        Login using social networks</p>
+                                    <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                        –––––––––OR–––––––––</p>
+                                    {# Form styling #}
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInput"
+                                               placeholder="Username">
+                                        <label for="floatingInput">Username</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                               placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                    {# Submit form #}
+                                    <button class="w-50 btn btn-lg btn-primary" type="submit">Sign In</button>
+                                        {#            <form method="POST">#}
+                                        {#                {% csrf_token %}#}
+                                        {#                {{ login_form|crispy }}#}
+                                        {#                <button class="btn btn-primary"#}
+                                        {#                        type="submit" style="font-weight: lighter; font-size: 12px">#}
+                                        {#                    Sign in#}
+                                        {#                </button>#}
+                                        {#            </form>#}
+                                    </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             {# Create right side of page layout #}
-            <div class="col-md-4" style="background: linear-gradient(#e66465, #9198e5); height: 100vh">
+            <div class="col-md-4 center-flex" style="background: linear-gradient(#e66465, #9198e5);">
                 <div class="form">
                     <h1 style="font-size: 60px; font-weight: 600; color: white">New Here?</h1>
                     <p style="font-size: 17px; font-weight: lighter; color: lightgray; letter-spacing: 2px">

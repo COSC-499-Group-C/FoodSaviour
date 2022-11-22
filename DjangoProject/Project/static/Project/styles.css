@@ -67,8 +67,9 @@ div.center-flex {
     justify-content: center;
 }
 
-.absolute-vertical-center {
+.absolute-top {
     position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
 }

@@ -55,3 +55,7 @@ def logout_request(request):
 def org_page_request(request):
     if request.method == "GET":
         org_id = OrgGroups.objects.get(user_id=request.user.id)
+
+
+def metrics_page_request(request):
+    return render(request=request, template_name="metrics.html")

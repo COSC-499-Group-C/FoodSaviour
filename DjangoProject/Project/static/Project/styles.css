@@ -42,7 +42,7 @@ body {
     margin: auto;
 }
 .btn {
-    width: 96px;
+    width: 128px;
     border-radius: 9999px;
 }
 .btn-home {
@@ -62,8 +62,13 @@ body {
     background: black;
     border-color: black;
     font-weight: bold;
-    margin: 0;
+    margin-left: 12px;
 }
 .bold {
     font-weight: bold;
+}
+.box {
+    color: black;
+    background: white;
+    border-radius: 20px;
 }

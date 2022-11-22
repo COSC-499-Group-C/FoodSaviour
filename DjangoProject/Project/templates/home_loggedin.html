@@ -4,17 +4,32 @@
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand bold" aria-current="page" href="/home_loggedin">Food Saviour</a>
-            <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
-        </div>
-    </nav>
-    <div class="container">
     {% if user.is_authenticated %}
-        <div class="center center-text">
-            <h1 class="bold">Hello, {{ username }}</h1>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" href="/home_loggedin">Food Saviour</a>
+                <div class="d-flex">
+                    <span class="navbar-text">Hello, {{ username }}</span>
+                    <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container center center-text">
+            <div class="row">
+                <div class="col-md-5 box">
+                    <a href="/metrics">
+                        <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
+                        <h3>Track Food Waste Metrics</h3>
+                    </a>
+                </div>
+                <div class="col-md-5 offset-md-2 box">
+                    <a href="/org_page">
+                        <img src="../static/Project/orgs_icon.png" alt="Organization Icon" class="img-lg">
+                        <h3>View Organization</h3>
+                    </a>
+                </div>
+              </div>
         </div>
     {% endif %}
-    </div>
 {% endblock %}

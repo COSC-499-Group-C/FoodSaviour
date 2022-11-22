@@ -64,18 +64,3 @@ form.center {
     margin-right: auto;
     text-align: center;
 }
-
-/* Vertically center element*/
-
-.centered-element {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-20%);
-
-}
-
-.row {
-    display: flex;
-    height: 100%
-}

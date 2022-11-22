@@ -51,7 +51,8 @@ def logout_request(request):
     return render(request=request, template_name="home.html")
 
 
-# Working on it
 def org_page_request(request):
     if request.method == "GET":
-        org_id = OrgGroups.objects.get(user_id=request.user.id)
+        org_id = OrgGroups.objects.filter(user_id=request.user.id).first().group_id
+        organization_name = Organizations.objects.filter(id=org_id).first().name
+    return render(request=request, template_name="org_page.html", context={"Organization": organization_name})

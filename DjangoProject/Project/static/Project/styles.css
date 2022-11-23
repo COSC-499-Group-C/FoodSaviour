@@ -19,22 +19,35 @@
     width: 20%;
 }
 body {
+    word-wrap: break-word;
     font-family: "Verdana", sans-serif;
     background-attachment: fixed;
 }
-
-.img-fluid {
+.center {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-text {
+    width: 100%;
+    text-align: center;
+}
+.img-lg {
     max-width: 70%;
     display: block;
     margin: auto;
 }
 .btn {
+    width: 96px;
+    border-radius: 9999px;
+}
+.btn-home {
     color: black;
     background: #ebf2fa;
     border-color: #ebf2fa;
     font-weight: bold;
-    width: 96px;
-    border-radius: 9999px;
     margin: 24px;
 }
 
@@ -72,4 +85,20 @@ div.center-flex {
     top: 0;
     left: 0;
     right: 0;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    width: 100%;
+}
+.btn-nav {
+    color: white;
+    background: black;
+    border-color: black;
+    font-weight: bold;
+    margin: 0;
+}
+.bold {
+    font-weight: bold;
 }

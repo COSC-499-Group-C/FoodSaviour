@@ -3,6 +3,7 @@ from .Forms.newUser import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from .models import OrgGroups, Organizations
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 
 

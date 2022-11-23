@@ -8,6 +8,16 @@
         <div class="center center-text">
             <h1 class="bold">Food Saviour</h1>
             <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" class="img-lg">
+
+            {#Display registration success or failure#}
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
             <a href="/login" class="btn btn-home btn-primary">Login</a>
             <a href="/register" class="btn btn-home btn-primary">Register</a>
         </div>

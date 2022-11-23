@@ -50,6 +50,43 @@ body {
     font-weight: bold;
     margin: 24px;
 }
+
+/* Format form on login page */
+
+.form-floating {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form.center {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Format login page sides */
+
+div.center-flex {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .navbar {
     background-color: #ebf2fa;
     box-shadow: 0 0 5px rgb(0 0 0 / 20%);

@@ -64,7 +64,7 @@ div.form {
     text-align: center;
 }
 
-form.center {
+form.middle {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -101,6 +101,7 @@ div.center-flex {
 }
 .bold {
     font-weight: bold;
+
 }
 .box {
     color: black;

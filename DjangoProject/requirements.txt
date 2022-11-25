@@ -22,3 +22,5 @@ Pillow>=3.0
 six
 pytz
 django-crispy-forms
+django-jquery
+django-bootstrap-static

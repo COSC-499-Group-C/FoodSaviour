@@ -57,3 +57,7 @@ def org_page_request(request):
         org_id = OrgGroups.objects.filter(user_id=request.user.id).first().group_id
         organization_name = Organizations.objects.filter(id=org_id).first().name
     return render(request=request, template_name="org_page.html", context={"Organization": organization_name})
+
+
+def metrics_page_request(request):
+    return render(request=request, template_name="metrics.html")

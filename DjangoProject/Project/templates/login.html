@@ -1,18 +1,83 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-{% load crispy_forms_tags %}
+    <html style="height: 100%" lang="en">
+    <head>
+        <title>{% block title %}Login{% endblock title %}</title>
+    </head>
+    <body>
+    {# Login #}
+    <div class="container-fluid"> {# Covers entire page #}
+        <div class="row">
+            {# Create left side of page layout #}
+            <div class="col-md-8 center-flex">
+                    <div class="container-fluid absolute-top p-5">
+                        {# Logo in the top left corner #}
+                        <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left;"
+                             width="75" height="75">
+                        <h1 style="font-size: 30px; font-weight: lighter; color: #4d4d4d; transform: translate(13px, 50%)">Food Saviour</h1>
+                    </div>
+                <div class="container-fluid">
+                    <div class="form">
+                        {# create form with post method #}
+                        <form class="middle" method="POST">
+                            {% csrf_token %}
+                            <h1 style="font-size: 60px; font-weight: 600; color: black;">Login to Your
+                                Account</h1>
+                            <p style="font-size: 17px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                Login using social networks</p>
+                            <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
+                                –––––––––OR–––––––––</p>
 
-<!--Login-->
-<div class="container py-5">
-  <h1>Login</h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ login_form|crispy }}
-    <button class="btn btn-primary" type="submit">Login</button>
-  </form>
-  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
-</div>
+                            {# Form styling #}
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingInput"
+                                       placeholder="Username">
+                                <label for="floatingInput">Username</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                       placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                            {# Submit form #}
+                            <button class="w-50 btn btn-lg btn-primary" type="submit">Sign In</button>
+            {#  !!! THIS IS THE WORKING LOGIN FORM COMMENTED BELOW, STILL YET TO WORK ON NEW LOGIN FORM !!! #}
+                                {#            <form method="POST">#}
+                                {#                {% csrf_token %}#}
+                                {#                {{ login_form|crispy }}#}
+                                {#                <button class="btn btn-primary"#}
+                                {#                        type="submit" style="font-weight: lighter; font-size: 12px">#}
+                                {#                    Sign in#}
+                                {#                </button>#}
+                                {#            </form>#}
+                            </form>
+                    </div>
+                </div>
+            </div>
+
+            {# Create right side of page layout #}
+            <div class="col-md-4 center-flex" style="background: linear-gradient(#e66465, #9198e5);">
+                <div class="form">
+                    <h1 style="font-size: 60px; font-weight: 600; color: white">New Here?</h1>
+                    <p style="font-size: 17px; font-weight: lighter; color: lightgray; letter-spacing: 2px">
+                        Create an account and start saving waste!</p>
+
+                    {# Sign up button, redirects to register page #}
+                    <button class="w-50 btn btn-lg btn-primary" type="button"
+                            onclick="window.location.href='/register'">Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+
+
 
 {% endblock %}

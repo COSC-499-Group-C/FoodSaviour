@@ -8,7 +8,7 @@
 }
 .container {
     width: 100%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 .content {
     float: left;
@@ -19,30 +19,92 @@
     width: 20%;
 }
 body {
-    font-family: sans-serif;
-    color: #ebf2fa;
-    background: linear-gradient(180deg, #05668d 0%, #427aa1 50%);
+    word-wrap: break-word;
+    font-family: "Verdana", sans-serif;
     background-attachment: fixed;
 }
-.container-fluid {
+.center {
     width: 100%;
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
 }
-.img-fluid {
+.center-text {
+    width: 100%;
+    text-align: center;
+}
+.img-lg {
     max-width: 70%;
     display: block;
     margin: auto;
 }
 .btn {
+    width: 128px;
+    border-radius: 9999px;
+}
+.btn-home {
     color: black;
     background: #ebf2fa;
     border-color: #ebf2fa;
     font-weight: bold;
-    width: 96px;
-    border-radius: 9999px;
     margin: 24px;
+}
+
+/* Format form on login page */
+
+.form-floating {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+}
+
+form.middle {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Format login page sides */
+
+div.center-flex {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar {
+    background-color: #ebf2fa;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    width: 100%;
+}
+.btn-nav {
+    color: white;
+    background: black;
+    border-color: black;
+    font-weight: bold;
+    margin-left: 12px;
+}
+.bold {
+    font-weight: bold;
+
+}
+.box {
+    color: black;
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 20px;
 }

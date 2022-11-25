@@ -1,8 +1,10 @@
 from django import forms
+from ..models import MetricData, WasteType
 
 
-class PredictionForm(forms.Form):
-    waste_type = forms.CharField()
-    weight = forms.FloatField()
-    amount = forms.IntegerField()
+class PredictionForm(forms.ModelForm):
+
+    class Meta:
+        model = MetricData
+        fields = ['waste_type', 'weight', 'amount']
 

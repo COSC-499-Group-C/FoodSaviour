@@ -67,7 +67,7 @@ def metrics_page_request(request):
             instance = form.save(commit=False)
             instance.user = request.user
             instance.save()
-            redirect("/tracker")
+            return redirect("/tracker")
     form = PredictionForm()
     return render(request=request, template_name="metrics.html",
                   context={"form": form, "username": request.user.username})

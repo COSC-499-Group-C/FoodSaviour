@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 {% load cms_tags %}
 {% load static %}
 
@@ -45,13 +46,13 @@
                     <p>
                         <select class="dropdown-toggle" oninput="this.className = ''" name="waste_type">
                             <option disabled selected>Select a waste type...</option>
-                            <option value="0">Frozen Fruits</option>
+                            <option value="1">Frozen Fruits</option>
                         </select></p>
 
                 </div>
                 <div class="tab">
                     <h6>What is the gross weight of each package (in grams)?</h6>
-                    <p><input type="number" oninput="this.className = ''" placeholder="15.75" name="weight"></p>
+                    <p><input type="number" step="0.00001" oninput="this.className = ''" placeholder="15.75" name="weight"></p>
 
                 </div>
                 <div class="tab">

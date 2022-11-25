@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .Forms.newUser import NewUserForm
+from .Forms.MetricForms import PredictionForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from .models import OrgGroups, Organizations
@@ -60,4 +61,10 @@ def org_page_request(request):
 
 
 def metrics_page_request(request):
-    return render(request=request, template_name="metrics.html")
+    if request.method == "POST":
+        form = PredictionForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data.get("waste_type"))
+    form = PredictionForm()
+    return render(request=request, template_name="metrics.html",
+                  context={"form": form, "username": request.user.username})

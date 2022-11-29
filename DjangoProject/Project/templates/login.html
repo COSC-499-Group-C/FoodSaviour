@@ -14,12 +14,13 @@
         <div class="row">
             {# Create left side of page layout #}
             <div class="col-md-8 center-flex">
-                    <div class="container-fluid absolute-top p-5">
-                        {# Logo in the top left corner #}
-                        <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left;"
-                             width="75" height="75">
-                        <h1 style="font-size: 30px; font-weight: lighter; color: #4d4d4d; transform: translate(13px, 50%)">Food Saviour</h1>
-                    </div>
+                <div class="container-fluid absolute-top p-5">
+                    {# Logo in the top left corner #}
+                    <img src="../static/Project/foodsaviour.png" alt="FoodSaviour Logo" style="float: left;"
+                         width="75" height="75">
+                    <h1 style="font-size: 30px; font-weight: lighter; color: #4d4d4d; transform: translate(13px, 50%)">
+                        Food Saviour</h1>
+                </div>
                 <div class="container-fluid">
                     <div class="form">
                         {# create form with post method #}
@@ -31,7 +32,11 @@
                                 Login using social networks</p>
                             <p style="font-size: 10px; font-weight: lighter; color: #4d4d4d; letter-spacing: 2px">
                                 –––––––––OR–––––––––</p>
-
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
                             {# Form styling #}
                             <div class="form-floating">
                                 <input name="username" type="text" class="form-control" id="floatingInput"
@@ -46,16 +51,16 @@
 
                             {# Submit form #}
                             <button class="w-50 btn btn-lg btn-primary" type="submit">Sign In</button>
-            {#  !!! THIS IS THE WORKING LOGIN FORM COMMENTED BELOW, STILL YET TO WORK ON NEW LOGIN FORM !!! #}
-                                {#            <form method="POST">#}
-                                {#                {% csrf_token %}#}
-                                {#                {{ login_form|crispy }}#}
-                                {#                <button class="btn btn-primary"#}
-                                {#                        type="submit" style="font-weight: lighter; font-size: 12px">#}
-                                {#                    Sign in#}
-                                {#                </button>#}
-                                {#            </form>#}
-                            </form>
+                            {#  !!! THIS IS THE WORKING LOGIN FORM COMMENTED BELOW, STILL YET TO WORK ON NEW LOGIN FORM !!! #}
+                            {#            <form method="POST">#}
+                            {#                {% csrf_token %}#}
+                            {#                {{ login_form|crispy }}#}
+                            {#                <button class="btn btn-primary"#}
+                            {#                        type="submit" style="font-weight: lighter; font-size: 12px">#}
+                            {#                    Sign in#}
+                            {#                </button>#}
+                            {#            </form>#}
+                        </form>
                     </div>
                 </div>
             </div>

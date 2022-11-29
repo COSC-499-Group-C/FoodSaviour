@@ -1,0 +1,13 @@
+.main-title{
+    font-weight: bold;
+    text-align: center;
+}
+.form-container{
+    text-align: center;
+    border: black 1px;
+    padding: 2em;
+    background: white;
+}
+body{
+    background: linear-gradient(#e66465, #9198e5);
+}

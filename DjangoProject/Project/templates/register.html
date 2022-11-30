@@ -1,32 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
-{% load crispy_forms_tags %}
+    {% load crispy_forms_tags %}
 
-<!--Registration page-->
-<!-- css sheet -->
-<link rel="stylesheet" href="../static/Project/register.css"/>
-<div class="container py-5">
+    <!--Registration page-->
+    <!-- css sheet -->
+    <link rel="stylesheet" href="../static/Project/register.css"/>
+    <div class="container py-5">
 
-	<h1 class = "main-title text-white mt-1 mb-5">Create an account</h1>
+        <h1 class="main-title text-white mt-1 mb-5">Create An Account</h1>
 
-    <div class = "form-container opacity-50 rounded-4">
-        <form method="POST">
-            {% csrf_token %}
-            {{ register_form|crispy }}
-            <button class="btn btn-primary" type="submit">Register</button>
-        </form>
+        <div class="form-container rounded-4">
+            {#Display registration success or failure#}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            {#        Old form code -- working #}
+            {#            <form method="POST">#}
+            {#                {% csrf_token %}#}
+            {#                {{ register_form|crispy }}#}
+            {#                <button class="w-25 btn btn-lg btn-primary" type="submit">Register</button>#}
+            {#            </form>#}
 
-        {#Display registration success or failure#}
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-            {% endfor %}
-        </ul>
-        {% endif %}
+            {#        New form code with styling#}
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInput"
+                           placeholder="Username">
+                    <label for="floatingInput">Username*</label>
+                </div>
+                <div class="form-floating" style="margin: 0; display: inline-block;">
+                    <div class="form-floating" style="float: left">
+                        <input type="text" class="form-control" id="fname"
+                               placeholder="First Name">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="form-floating" style="float: left">
+                        <input type="text" class="form-control" id="lname"
+                               placeholder="Last Name">
+                        <label for="lname">Last Name</label>
+                    </div>
+                </div>
+                <div class="form-floating" style="margin-top: 5px">
+                    <input type="email" class="form-control" id="email"
+                           placeholder="Email">
+                    <label for="email">Email*</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword"
+                           placeholder="Password">
+                    <label for="floatingPassword">Password*</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="passconfirmation"
+                           placeholder="Password">
+                    <label for="passconfirmation">Password Confirmation*</label>
+                </div>
+                <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit">Register</button>
+            </form>
 
-        <p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+            <p class="text-center">If you already have an account, <a href="/login">login here</a> instead.</p>
+        </div>
     </div>
-</div>
 
 {% endblock %}

@@ -33,8 +33,10 @@
                 <div class="form-floating">
                     <input type="text" class="form-control" id="floatingInput"
                            placeholder="Username">
-                    <label for="floatingInput">Username*</label>
+                    <label for="floatingInput">Username</label>
                 </div>
+
+                <p style="margin: 0">150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
                 <div class="form-floating" style="margin: 0; display: inline-block;">
                     <div class="form-floating" style="float: left">
                         <input type="text" class="form-control" id="fname"
@@ -47,20 +49,27 @@
                         <label for="lname">Last Name</label>
                     </div>
                 </div>
+
                 <div class="form-floating" style="margin-top: 5px">
                     <input type="email" class="form-control" id="email"
                            placeholder="Email">
-                    <label for="email">Email*</label>
+                    <label for="email">Email</label>
                 </div>
+
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword"
                            placeholder="Password">
-                    <label for="floatingPassword">Password*</label>
+                    <label for="floatingPassword">Password</label>
                 </div>
+
+                <p style="margin: 5px">Your password can't be too similar to your other personal information.</p>
+                <p style="margin: 5px">Your password must contain at least 8 characters.</p>
+                <p style="margin: 5px">Your password can't be a commonly used password.</p>
+                <p style="margin: 5px">Your password can't be entirely numeric.</p>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="passconfirmation"
                            placeholder="Password">
-                    <label for="passconfirmation">Password Confirmation*</label>
+                    <label for="passconfirmation">Password Confirmation</label>
                 </div>
                 <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit">Register</button>
             </form>

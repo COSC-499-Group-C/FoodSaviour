@@ -9,8 +9,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand" aria-current="page" href="/home">Food Saviour</a>
                 {% if user.is_superuser %}
-                        <span class="navbar-text" style="align-items: center"><a href="/admin">Admin</a></span>
-                    {% endif %}
+                    <span class="navbar-text" style="align-items: center"><a href="/admin">Admin</a></span>
+                {% endif %}
                 <div class="d-flex">
                     <span class="navbar-text">Hello, {{ username }}</span>
                     <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
@@ -18,6 +18,11 @@
 
             </div>
         </nav>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
         <div class="container center center-text">
             <div class="row">
                 <div class="col-md-5 box">

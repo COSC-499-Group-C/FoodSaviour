@@ -1,0 +1,76 @@
+{% load cms_tags %}
+{% load static %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% placeholder "content" %}
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'Project/metrics.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script defer src="{% static 'fontawesome/js/all.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Project/metrics.js' %}"></script>
+</head>
+
+<body>
+<nav class="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" aria-current="page" href="/home">Food Saviour</a>
+        <div class="d-flex">
+            <span class="navbar-text">Hello, {{ username }}</span>
+            <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <form method="POST">
+                {% csrf_token %}
+                <h1 id="metricHeading">Metric Form</h1>
+                <div class="all-steps" id="all-steps">
+                    <span class="step"><i class="fa fa-recycle"></i></span>
+                    <span class="step"><i class="fa fa-balance-scale"></i></span>
+                    <span class="step"><i class="fa fa-hashtag"></i></span>
+                </div>
+
+                <div class="tab">
+                    <h6>What type of waste is it?</h6>
+                    <p>
+                        <select class="dropdown-toggle" oninput="this.className = ''" name="waste_type">
+                            <option disabled selected>Select a waste type...</option>
+                            <option value="1">Frozen Fruits</option>
+                        </select></p>
+
+                </div>
+                <div class="tab">
+                    <h6>What is the gross weight of each package (in grams)?</h6>
+                    <p><input type="number" step="0.00001" oninput="this.className = ''" placeholder="15.75" name="weight"></p>
+
+                </div>
+                <div class="tab">
+                    <h6>Amount of packages:</h6>
+                    <p><input type="number" oninput="this.className = ''" placeholder="5" name="amount"></p>
+                    <button type="submit" id="subBtn" value="Submit">Submit</button>
+                </div>
+
+                <div style="overflow:auto;" id="nextprevious">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i
+                                class="fa fa-angle-double-left"></i></button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)"><i
+                                class="fa fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

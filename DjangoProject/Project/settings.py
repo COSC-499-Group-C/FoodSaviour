@@ -179,7 +179,10 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
     'Project',
-    'crispy_forms'
+    'crispy_forms',
+    'jquery',
+    'bootstrap',
+    'fontawesome',
 ]
 
 LANGUAGES = (

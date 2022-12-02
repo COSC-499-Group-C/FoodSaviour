@@ -6,6 +6,7 @@ from django.contrib import messages
 from .models import OrgGroups, Organizations, WasteType
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from .decorators import registered_org_user
 
 
 def register_request(request):
@@ -40,17 +41,21 @@ def login_request(request):
             messages.info(request, "Invalid username or password.")
     return render(request=request, template_name="login.html")
 
+
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
     return render(request=request, template_name="home.html")
 
 
+@registered_org_user
 def org_page_request(request):
     if request.method == "GET":
         org_id = OrgGroups.objects.filter(user_id=request.user.id).first().group_id
         organization_name = Organizations.objects.filter(id=org_id).first().name
-    return render(request=request, template_name="org_page.html", context={"Organization": organization_name})
+        return render(request=request, template_name="org_page.html", context={"Organization": organization_name})
+    else:
+        redirect("/login")
 
 
 def metrics_page_request(request):

@@ -1,11 +1,15 @@
 {% extends "base.html" %}
-
 {% block content %}
+    {% load crispy_forms_tags %}
 
-{% load crispy_forms_tags %}
-
-<!--Register-->
-<div class="container py-5">
+    <!--Registration page-->
+    <!-- css sheet -->
+    <html lang="en">
+    <head>
+        <title>{% block title %}Register{% endblock title %}</title>
+    </head>
+    <link rel="stylesheet" href="../static/Project/register.css"/>
+    <div class="container py-5">
 
         <h1 class="main-title text-white mt-1 mb-5">Create An Account</h1>
 
@@ -91,6 +95,7 @@
             }
             if (password.length < 8)
             {
+                document.getElementById('length_error').style.color = 'red';
                 document.getElementById("length_error").innerHTML = "Your password must contain at least 8 characters.";
             }
             else if (password.length >= 8)
@@ -99,6 +104,7 @@
             }
             if((!char.test(password)))
             {
+                document.getElementById('numeric_error').style.color = 'red';
                 document.getElementById("numeric_error").innerHTML = "Your password can't be entirely numeric.";
             }
             else if((char.test(password)))

@@ -15,27 +15,27 @@
 
         <div class="form-container rounded-4">
             {#Display registration success or failure#}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
-            {#        Old form code -- working #}
-            {#            <form method="POST">#}
-            {#                {% csrf_token %}#}
-            {#                {{ register_form|crispy }}#}
-            {#                <button class="w-25 btn btn-lg btn-primary" type="submit">Register</button>#}
-            {#            </form>#}
+{#            {% if messages %}#}
+{#                {% for message in messages %}#}
+{#                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
 
-            {#        New form code with styling#}
+
+            <!-- Registration form -->
             <form method="POST">
                 {% csrf_token %}
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput"
-                           placeholder="Username">
+                    <input type="text" class="form-control mb-2" id="floatingInput" placeholder="Username">
                     <label for="floatingInput">Username</label>
                 </div>
-
                 <p style="margin: 0">150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
                 <div class="form-floating" style="margin: 0; display: inline-block;">
                     <div class="form-floating" style="float: left">
@@ -59,15 +59,15 @@
                     <label for="floatingPassword">Password</label>
                 </div>
                 <p style="margin: 5px">Your password can't be too similar to your other personal information.</p>
-                <p style="margin: 5px" id = "password-length">Your password must contain at least 8 characters.</p>
+{#                <p style="margin: 5px" id = "password-length">Your password must contain at least 8 characters.</p>#}
                 <p style="margin: 5px">Your password can't be a commonly used password.</p>
-                <p style="margin: 5px">Your password can't be entirely numeric.</p>
+{#                <p style="margin: 5px" id = "char_check">Your password can't be entirely numeric.</p>#}
                 <div class="form-floating">
                     <input type="password" class="form-control" id="passconfirmation"
                            placeholder="Password">
                     <label for="passconfirmation">Password Confirmation</label>
                 </div>
-                <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit">Register</button>
+                <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit" onsubmit="formValidation()">Register</button>
             </form>
 
             <p class="text-center">If you already have an account, <a href="/login">login here</a> instead.</p>
@@ -75,12 +75,22 @@
     </div>
 
     <script>
-        var password = document.getElementById("floatingPassword");
-        if (password.value.length <= 8)
+        {#Form validation#}
+        function formValidation()
         {
-            document.getElementById("password-length").innerHTML = "Test";
+            var password = document.getElementById("floatingPassword");
+            var char = /[a-zA-Z]/g;
+            if (password.value.length <= 8)
+            {
+                document.getElementById("password-length").innerHTML = "Your password must contain at least 8 characters.";
+            }
+            else if(!(char.test(password.value)))
+            {
+                document.getElementById("char_check").innerHTML = "Your password can't be entirely numeric.";
+            }
         }
     </script>
+
     </html>
 
 {% endblock %}

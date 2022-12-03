@@ -39,7 +39,7 @@ def login_request(request):
         else:
             messages.info(request, "Invalid username or password.")
     return render(request=request, template_name="login.html")
-
+    
 
 def logout_request(request):
     logout(request)

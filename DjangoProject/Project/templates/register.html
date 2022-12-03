@@ -83,4 +83,33 @@
     </script>
     </html>
 
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <p style="margin: 5px">Your password can't be too similar to your other personal information.</p>
+                <p style="margin: 5px" id = "password-length">Your password must contain at least 8 characters.</p>
+                <p style="margin: 5px">Your password can't be a commonly used password.</p>
+                <p style="margin: 5px">Your password can't be entirely numeric.</p>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="passconfirmation"
+                           placeholder="Password">
+                    <label for="passconfirmation">Password Confirmation</label>
+                </div>
+                <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit">Register</button>
+            </form>
+
+            <p class="text-center">If you already have an account, <a href="/login">login here</a> instead.</p>
+        </div>
+    </div>
+
+    <script>
+        var password = document.getElementById("floatingPassword");
+        if (password.value.length <= 8)
+        {
+            document.getElementById("password-length").innerHTML = "Test";
+        }
+    </script>
+    </html>
+
 {% endblock %}

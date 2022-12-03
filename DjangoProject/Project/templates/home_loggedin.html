@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load cms_tags %}
+{% load auth_tag %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
@@ -12,7 +13,7 @@
                     <span class="navbar-text" style="align-items: center"><a href="/admin">Admin</a></span>
                 {% endif %}
                 <div class="d-flex">
-                    <span class="navbar-text">Hello, {{ username }}</span>
+                    <span class="navbar-text">Hello, {{ fullname }}</span>
                     <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
                 </div>
 
@@ -25,7 +26,9 @@
             {% endfor %}
         {% endif %}
         <div class="container center center-text">
-            <div class="row">
+            <div class="row justify-content-center">
+                {% get_user_type user as value %}
+                {% if value %}
                 <div class="col-md-5 box">
                     <a href="/tracker" style="text-decoration: none; color: white;">
                         <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
@@ -38,6 +41,14 @@
                         <h3 class="bold">View Organization</h3>
                     </a>
                 </div>
+                {% else %}
+                <div class="col-5 box">
+                    <a href="/tracker" style="text-decoration: none; color: white;">
+                        <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
+                        <h3 class="bold">Track Food Waste Metrics</h3>
+                    </a>
+                </div>
+                {% endif %}
             </div>
         </div>
     {% endif %}

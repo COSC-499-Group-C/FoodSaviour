@@ -42,3 +42,41 @@
         </div>
     {% endif %}
 {% endblock %}
+
+<nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-current="page" href="/home">Food Saviour</a>
+                {% if user.is_superuser %}
+                    <span class="navbar-text" style="align-items: center"><a href="/admin">Admin</a></span>
+                {% endif %}
+                <div class="d-flex">
+                    <span class="navbar-text">Hello, {{ username }}</span>
+                    <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
+                </div>
+
+            </div>
+        </nav>
+{#        Alert for successful registration #}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        <div class="container center center-text">
+            <div class="row">
+                <div class="col-md-5 box">
+                    <a href="/tracker" style="text-decoration: none; color: white;">
+                        <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
+                        <h3 class="bold">Track Food Waste Metrics</h3>
+                    </a>
+                </div>
+                <div class="col-md-5 offset-md-2 box">
+                    <a href="/org_page" style="text-decoration: none; color: white;">
+                        <img src="../static/Project/orgs_icon.png" alt="Organization Icon" class="img-lg">
+                        <h3 class="bold">View Organization</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

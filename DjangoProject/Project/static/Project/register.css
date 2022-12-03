@@ -1,0 +1,20 @@
+.main-title{
+    font-weight: bold;
+    text-align: center;
+}
+.form-container{
+    text-align: center;
+    border: black 1px;
+    padding: 2em;
+    background: rgb(255, 255, 255, 0.5);
+}
+body{
+    background: linear-gradient(#e66465, #9198e5);
+    height: 100vh;
+}
+
+.form-floating {
+    width: 50%;
+    text-align: left;
+    margin: 10px auto auto;
+}

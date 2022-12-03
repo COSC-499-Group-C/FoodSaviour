@@ -19,26 +19,28 @@
             </div>
         </nav>
 {#        Alert for successful registration #}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-        <div class="container center center-text">
-            <div class="row">
-                <div class="col-md-5 box">
-                    <a href="/tracker" style="text-decoration: none; color: white;">
-                        <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
-                        <h3 class="bold">Track Food Waste Metrics</h3>
-                    </a>
-                </div>
-                <div class="col-md-5 offset-md-2 box">
-                    <a href="/org_page" style="text-decoration: none; color: white;">
-                        <img src="../static/Project/orgs_icon.png" alt="Organization Icon" class="img-lg">
-                        <h3 class="bold">View Organization</h3>
-                    </a>
+        {% block subcontent %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <div class="container center center-text">
+                <div class="row">
+                    <div class="col-md-5 box">
+                        <a href="/tracker" style="text-decoration: none; color: white;">
+                            <img src="../static/Project/metrics_icon.png" alt="Metrics Icon" class="img-lg">
+                            <h3 class="bold">Track Food Waste Metrics</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-5 offset-md-2 box">
+                        <a href="/org_page" style="text-decoration: none; color: white;">
+                            <img src="../static/Project/orgs_icon.png" alt="Organization Icon" class="img-lg">
+                            <h3 class="bold">View Organization</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endblock subcontent %}
     {% endif %}
-{% endblock %}
+{% endblock content %}

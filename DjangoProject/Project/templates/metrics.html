@@ -1,33 +1,16 @@
+{% extends "home_loggedin.html" %}
 {% load cms_tags %}
 {% load static %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
-{% placeholder "content" %}
-<!doctype html>
-<html>
-
-<head>
+{% block header %}
     <link rel="stylesheet" href="{% static 'Project/metrics.css'%}">
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <script defer src="{% static 'fontawesome/js/all.min.js' %}"></script>
-    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'Project/metrics.js' %}"></script>
-</head>
+{% endblock header %}
 
-<body>
-<nav class="navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand" aria-current="page" href="/home">Food Saviour</a>
-        <div class="d-flex">
-            <span class="navbar-text">Hello, {{ username }}</span>
-            <a href="/logout" class="btn btn-nav btn-primary">Logout</a>
-        </div>
-
-    </div>
-</nav>
-
+{% block subcontent %}
 <div class="container mt-5">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-8">
@@ -72,5 +55,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+{% endblock subcontent %}

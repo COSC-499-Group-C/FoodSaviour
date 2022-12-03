@@ -7,24 +7,107 @@
 <!--Register-->
 <div class="container py-5">
 
-	<h1>Register</h1>
+        <h1 class="main-title text-white mt-1 mb-5">Create An Account</h1>
 
-	<form method="POST">
-		{% csrf_token %}
-		{{ register_form|crispy }}
-		<button class="btn btn-primary" type="submit">Register</button>
-	</form>
+        <div class="form-container rounded-4">
+            {#Display registration success or failure#}
+{#            {% if messages %}#}
+{#                {% for message in messages %}#}
+{#                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
 
-    {#Display registration success or failure#}
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
-        {% endfor %}
-    </ul>
-    {% endif %}
 
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
-</div>
+            <!-- Registration form -->
+            <form method="POST">
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                <div class="form-floating">
+                    <input type="text" class="form-control mb-2" id="floatingInput" placeholder="Username">
+                    <label for="floatingInput">Username</label>
+                </div>
+                <p style="margin: 0">150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
+                <div class="form-floating" style="margin: 0; display: inline-block;">
+                    <div class="form-floating" style="float: left">
+                        <input type="text" class="form-control" id="fname" placeholder="First Name">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="form-floating" style="float: left">
+                        <input type="text" class="form-control" id="lname"
+                               placeholder="Last Name">
+                        <label for="lname">Last Name</label>
+                    </div>
+                </div>
+
+                <div class="form-floating" style="margin-top: 5px">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" oninput="formValidation();">
+                    <label for="floatingPassword">Password</label>
+                    <p id='length_error'></p>
+                    <p id='numeric_error'></p>
+                </div>
+                <p style="margin: 5px">Your password can't be too similar to your other personal information.</p>
+{#                <p style="margin: 5px" id = "password-length">Your password must contain at least 8 characters.</p>#}
+                <p style="margin: 5px">Your password can't be a commonly used password.</p>
+{#                <p style="margin: 5px" id = "char_check">Your password can't be entirely numeric.</p>#}
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="passconfirmation" placeholder="Password">
+                    <label for="passconfirmation">Password Confirmation</label>
+                    <span id='message'></span>
+                </div>
+                <button class="w-50 btn btn-lg btn-primary" style="margin: 20px" type="submit">Register</button>
+            </form>
+
+            <p class="text-center">If you already have an account, <a href="/login">login here</a> instead.</p>
+        </div>
+    </div>
+
+    <script>
+        {#Form validation#}
+        var formValidation = function()
+        {
+            var password = document.getElementById("floatingPassword").value;
+            var password_confirmation = document.getElementById("passconfirmation").value;
+            var char = /[a-zA-Z]/;
+            if(password !== password_confirmation)
+            {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Password is not matching';
+            }
+            if(password === password_confirmation)
+            {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Password is matching';
+            }
+            if (password.length < 8)
+            {
+                document.getElementById("length_error").innerHTML = "Your password must contain at least 8 characters.";
+            }
+            else if (password.length >= 8)
+            {
+                document.getElementById("length_error").innerHTML = "";
+            }
+            if((!char.test(password)))
+            {
+                document.getElementById("numeric_error").innerHTML = "Your password can't be entirely numeric.";
+            }
+            else if((char.test(password)))
+            {
+                document.getElementById("numeric_error").innerHTML = "";
+            }
+        }
+    </script>
+
+    </html>
 
 {% endblock %}

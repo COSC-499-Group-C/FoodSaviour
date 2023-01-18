@@ -5,3 +5,6 @@
 2. Mitch Hussack - Client liasion
 3. Paul Gray - Quality Assurance lead
 4. Anshul Dhariwal - Technical lead
+
+### Webpage Templates (HTML pages)
+DjangoProject/Project/templates/

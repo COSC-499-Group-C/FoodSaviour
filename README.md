@@ -1,4 +1,5 @@
-# MNP_GroupC
+# MNP_GroupC FoodSaviour
+This repository is using the old DjangoCMS structure
 
 ## Team members
 1. Sydney Fang - Project Manager

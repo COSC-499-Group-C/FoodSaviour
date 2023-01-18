@@ -8,3 +8,6 @@
 
 ### Webpage Templates (HTML pages)
 DjangoProject/Project/templates/
+
+### Peer Testing Report
+documents/client/Peer Testing Report 1.pdf
